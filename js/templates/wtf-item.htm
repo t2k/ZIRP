@@ -1,0 +1,17 @@
+﻿<a data-user-id={{uid}} href="#!/{{uid}}" class='user-profile-link span2'>
+    <img alt='{{fn}}' src="{{(img.length==0)? "/profile/default.png" : img }}" >
+</a>
+<div class=span9>
+    <small>
+        <span data-user-id={{uid}}> <strong>{{fn}}</strong> 
+            <span><strong>@<span>{{uid}}</span></strong></span> 
+        </span>
+        <br />
+        <span><em>Working in </em><strong class=fullname>{{ctr}} · {{dpt}}</strong></span>
+        <br />
+        <span class="js-follow-state">
+            <a data-user-id={{uid}} class=js-action-follow href="#!/{{uid}}" >Follow</a> 
+        </span>
+    </small>
+</div>
+   

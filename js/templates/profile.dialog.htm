@@ -1,0 +1,66 @@
+﻿<div class="modal" id="zirpen-profile-modal">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <div class="profile-modal-header js-twttr-dialog-draggable">
+            <a data-element-term="view_profile_link" href="#!/{{uid}}" class="account-group js-account-group js-bubble-event"
+                data-user-id="{{uid}}">
+                <img data-user-id="{{uid}}" alt="{{fn}}" src="{{img.length==0? '/profile/default.png': img.replace('~','') }}"
+                    class="avatar">
+                <div class="profile-modal-header-inner">
+                    <h2 class="fullname">
+                        <span>{{fn}}</span>
+                    </h2>
+                    <h3 class="username">
+                        <a href="#!/{{uid}}" class="pretty-link js-screen-name"><s>@</s>{{uid}}</a> <span
+                            class="follow-status js-follows-you">follows you</span>
+                    </h3>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="modal-body">
+        <div class="profile-modal-extended">
+            <p class="bio">
+                {{bio}}</p>
+            <p class="location-and-url">
+                <span class="location">{{ctr}} / {{dpt}}</span>
+            </p>
+            <p class="social-proof js-mini-social-proof-container">
+            </p>
+        </div>
+        <ul class="stats js-mini-profile-stats">
+            <li><a data-element-term="tweet_stats" href="#!/{{uid}}"><strong>{{zc}}</strong> Zirpens</a></li>
+            <li><a data-element-term="following_stats" href="#!/{{uid}}/following"><strong>{{fc}}</strong> Following</a></li>
+            <li><a data-element-term="follower_stats" href="#!/{{uid}}/followers"><strong>{{f2}}</strong> Followers</a></li>
+        </ul>
+        <div class="mini-profile-footer ">
+            <div class="follow-bar">
+                <small>
+                    <!-- <a href=# data-user-id={{uid}} class="view-profile js-mini-profile-user">View more Tweets
+                                            →</a> -->
+                </small>
+                <div data-screen-name="{{uid}}" data-user-id="{{uid}}" class="js-follow-combo follow-combo btn-group js-actionable-user following including"
+                    data-dropdown="true">
+                    <a class="follow-btn btn js-combo-btn js-recommended-item">
+                        <div data-user-id="{{uid}}" class="js-action-follow follow-text action-text">
+                            <i class="follow"></i>Follow
+                        </div>
+                        <div class="following-text action-text">
+                            Following
+                        </div>
+                        <div data-user-id="{{uid}}" class="js-action-unfollow unfollow-text action-text">
+                            Unfollow
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="component" data-component-term="recent_tweets">
+            <div class="recent-tweets">
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <!-- <a href="#" class="btn btn-primary" data-dismiss="modal">Close</a> -->
+    </div>
+</div>

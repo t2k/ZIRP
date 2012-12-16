@@ -1,0 +1,107 @@
+﻿<div data-section-term="top_nav" class="global-nav">
+    <div class="global-nav-inner">
+        <div class="container">
+            <ul id="global-actions" class="nav js-global-actions">
+                <li data-global-action="home" class="home active" id="global-nav-home"><a data-component-term="home_nav"
+                    href="/zirp" class="js-hover"><span class="new-wrapper"><i class="nav-home"></i><i
+                        class="nav-new"></i></span>Home </a></li>
+                <li data-global-action="connect" class="people"><a data-component-term="connect_nav"
+                    href="#/connect" class="js-hover"><span class="new-wrapper"><i class="nav-people"></i>
+                        <i class="nav-new"></i></span>Connect </a></li>
+                <li data-global-action="discover" class="topics"><a data-component-term="discover_nav"
+                    href="#/discover" class="js-hover"><span class="new-wrapper"><i class="nav-topics"></i>
+                        <i class="nav-new"></i></span>Discover </a></li>
+            </ul>
+            <i class="larry-topbar"></i>
+            <div class="pull-right">
+                <div class="well topbar-tweet-btn">
+                    <button data-component-term="new_tweet_button" class="btn btn-tweet js-global-new-tweet js-hover"
+                        type="button" id="global-new-tweet-button" title="Compose new Zirpen">
+                        <i class="nav-tweet"></i>
+                    </button>
+                </div>
+                <i class="topbar-divider"></i>
+                <ul class="nav">
+                    <li id="user-dropdown" data-global-action="t1me" class="me dropdown session js-session">
+                        <a id="user-dropdown-toggle" href="#/lists" class="dropdown-toggle js-dropdown-toggle js-hover">
+                            <span class="new-wrapper"><i class="nav-me"></i><i class="nav-new"></i></span><span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-caret"><span class="caret-outer"></span><span class="caret-inner">
+                            </span></li>
+                            <li data-name="profile" class="current-user"><a class="account-summary account-summary-small"
+                                href="#/profile/{{uid}}">
+                                <div class="content">
+                                    <div data-screen-name="{{uid}}" data-user-id="{{id}}" class="account-group js-mini-current-user">
+                                        <img data-user-id="{{id}}" alt="{{fn}}" src="{{(img.length==0)? '/profile/default.png' : img }}"
+                                            class="avatar size32">
+                                        <b class="fullname">{{fn}}</b> <small class="metadata">View my profile page</small>
+                                    </div>
+                                </div>
+                            </a></li>
+                            <li class="dropdown-divider"></li>
+                            <li data-name="messages" class="messages"><a href="#/dm/{{uid}}" class="js-dm-dialog">
+                                <span class="js-direct-message-count count"></span>Direct messages </a></li>
+                            <li data-name="lists"><a href='#/lists/{{uid}}'>Lists</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a href="#/support">Help</a></li>
+                            <li><a class="js-keyboard-shortcut-trigger" href="#/shortcuts">Keyboard shortcuts </a>
+                            </li>
+                            <li class="dropdown-divider"></li>
+                            <li><a href="#/settings/{{uid}}">Settings</a></li>
+                            <li><a href="#/logout" id="signout-button" class="js-signout-button">Sign out</a>
+                                <form method="POST" action="#/logout" id="signout-form" class="dropdown-link-form signout-form">
+                                <input type="hidden" class="authenticity_token" name="authenticity_token" value="no-Op">
+                                <input type="hidden" class="js-reliability-event" name="reliability_event">
+                                <input type="hidden" name="scribe_log">
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <i class="topbar-divider"></i>
+                <form id="global-nav-search" autocomplete="off" action="#/search" class="form-search js-search-form ddg207-rilc has-saved-searches">
+                <span class="search-icon js-search-action"><i class="nav-search"></i></span>
+                <input type="text" name="q" placeholder="Search" id="search-query" class="search-input">
+                <div class="dropdown-menu typeahead js-global-nav-dropdown">
+                    <div class="dropdown-caret">
+                        <div class="caret-outer">
+                        </div>
+                        <div class="caret-inner">
+                        </div>
+                    </div>
+                    <div class="dropdown-inner">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="typeahead-label">
+                                        Saved
+                                    </td>
+                                    <td class="typeahead-items">
+                                        <ul>
+                                            <li><a data-query-source="saved_search_click" data-search-query="#SX" href="#/search/%23SX">
+                                                #SX</a></li>
+                                            <li><a data-query-source="saved_search_click" data-search-query="#aspnet" href="#/search/%23aspnet">
+                                                #aspnet</a></li>
+                                            <li><a data-query-source="saved_search_click" data-search-query="#jqueryui" href="#/search/%23jqueryui">
+                                                #jqueryui</a></li>
+                                            <li><a data-query-source="saved_search_click" data-search-query="#Jquery" href="#/search/%23Jquery">
+                                                #Jquery</a></li>
+                                            <li><a data-query-source="saved_search_click" data-search-query="#html5" href="#/search/%23html5">
+                                                #html5</a></li>
+                                            <li><a data-query-source="saved_search_click" data-search-query="jquery deferred"
+                                                href="#/search/jquery%20deferred">jquery deferred</a></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                </form>
+            </div>
+            <a href="#/closeall" class="close-all-tweets js-close-all-tweets" title="Close all open Tweets"
+                style="display: none;"><i class="nav-breaker"></i></a>
+        </div>
+    </div>
+</div>

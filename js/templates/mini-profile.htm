@@ -1,0 +1,17 @@
+﻿<div class="flex-module profile-summary" data-uid="{{uid}}" >
+    <a href="#!/{{uid}}" class="account-summary account-summary-small">
+        <div class="content">
+            <div class="account-group" data-user-id="{{id}}" data-screen-name="{{uid}}">
+                <img data-uid="{{uid}}" class="avatar size32" src="{{(img.length==0)? "/profile/default.png" : img }}" alt="{{fn}}" title="{{fn}}" >
+                <b class="fullname">{{fn}}</b><small class="metadata">View my profile page</small>
+            </div>
+        </div>
+    </a>
+</div>
+<div class="js-mini-profile-stats-container">
+    <ul class="stats js-mini-profile-stats">
+        <li><a href="#!/{{uid}}" data-element-term="tweet_stats"><strong>{{zc}}</strong>Zirpens</a></li>
+        <li><a href="#!/{{uid}}/following" data-element-term="following_stats"><strong>{{fc}}</strong>Following</a></li>
+        <li><a href="#!/{{uid}}/followers" data-element-term="follower_stats"><strong>{{f2}}</strong>Followers</a></li>
+    </ul>
+</div>

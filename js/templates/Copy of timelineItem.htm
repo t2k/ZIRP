@@ -1,0 +1,43 @@
+﻿<div class=tweet>
+    <div class=row-fluid>
+    <div data-user-id={{uid}} data-screen-name="{{pro.fn}}" data-item-id={{id}} data-tweet-id={{id}} >
+        <div class=row-fluid>
+            <div class=span1 >
+                <a data-user-id={{uid}} href="#" class="user-profile-link " >
+                    <img title='{{pro.fn}}' style="max-width: 32px;"  class='avatar' src="{{(pro.img)? pro.img.replace("~","") : '/profile/default.png' }}" >
+                </a>
+            </div>
+            <div class=span10>
+                <small>
+                <strong>{{pro.fn}}</strong> 
+                <span >
+                    <strong>@{{uid}}</strong>
+                </span>
+                </small> 
+            </div>
+            <div class=span1 style="text-align:right;">
+                <small>
+                    <span class=muted data-zirptime={{ts}} >{{$.elapsedTimeString(new Date(ts))}}</span>
+                </small>
+            </div>
+        </div>
+        <div class=row-fluid>
+            <div class='span11 offset1'>
+                {{zirp}}
+            </div>
+        </div>
+
+        <div class='row-fluid drawer hide'>
+            <div class="form-horizontal">
+              <div class="control-group">
+                <label class="control-label" for="inputEmail">tweet</label>
+                <div class="controls">
+                  <input type="text" id="inputEmail" placeholder="reply">
+                  <button class="close">&times;</button>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

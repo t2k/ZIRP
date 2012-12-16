@@ -1,0 +1,20 @@
+﻿<div class="dismiss js-action-dismiss">
+    <i class="close"></i>
+</div>
+<div class="content">
+    <a data-user-id='{{uid}}' href="#!/{{uid}}" class="account-group js-user-profile-link" >
+        <img alt='{{fn}}' class="avatar js-action-profile-avatar"  src="{{(img.length==0)? "/profile/default.png" : img }}" >
+        <span data-user-id={{uid}} class="account-group-inner js-action-profile-name"> <b class="fullname">{{fn}}</b> 
+            <span class="username"><s>@</s><span class="js-username">{{uid}}</span></span> 
+        </span>
+    </a>
+    <small class="metadata social-context">
+                    Working in <b class=fullname>{{ctr}} · {{dpt}}</b>
+    </small>
+    <small class="metadata with-icn js-disclosure" >
+                                <!-- <a class="js-promoted-badge js-user-profile-link" href="/#!/fluentconf" original-title="">
+                                    <i class="badge-promoted"></i>Promoted </a> -->
+    </small><span class="js-follow-state"><a data-user-id={{uid}} class="js-action-follow js-link"
+        href="#">Follow</a> </span>
+</div>
+

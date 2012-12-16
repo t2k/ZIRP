@@ -1,0 +1,37 @@
+﻿<div data-component-term="mini_home_profile" class="module mini-profile">
+    <div class="flex-module profile-summary">
+        <a href="/profile/{{uid}}" class="account-summary account-summary-small">
+            <div class="content">
+                <div class="account-group" data-user-id="" data-screen-name="">
+                    <img data-uid="{{uid}}" class="avatar size32" src="{{(pro.img==0)? '/profile/default.png' : img }}" alt='{{fn}}' title='{{fn}}'>
+                    <b class="fullname">{{fn}}</b><small class="metadata">View my profile page</small>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="js-mini-profile-stats-container">
+        <ul class="stats js-mini-profile-stats">
+            <li><a href="#" data-element-term="tweet_stats"><strong id="zirpcnt">216</strong>Zirpens</a></li>
+            <li><a href="#" data-element-term="following_stats"><strong id="followingcnt">17</strong>
+                Following</a></li>
+            <li><a href="#" data-element-term="follower_stats"><strong id="followercnt">2</strong>
+                Followers</a></li>
+        </ul>
+    </div>
+    <div class="tweet-box tweet-user">
+        <div class="tweet-box condensed">
+            <div class="text-area">
+                <div class="text-area-editor twttr-editor">
+                    <textarea id="zirpen" placeholder="compose your Zirpen" class="twitter-anywhere-tweet-box-editor" style="width: 95%;"></textarea>
+                </div>
+            </div>
+            <div class="tweet-button-container">
+                <div class="tweet-button-sub-container clearfix">
+                    <img width="24" height="24" alt="zirpen" src="/img/spinner.gif" class="tweet-spinner">
+                    <span id="zirpen-counter">140</span><a id="zirpen-button" href="#" class="tweet-button btn right " role="button"><span>
+                        Zirpen</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

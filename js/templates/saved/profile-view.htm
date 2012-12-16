@@ -1,0 +1,33 @@
+﻿<div class="js-content-top">
+    <div class="module profile-card component" data-component-term="profile_follow_card">
+        <div class="flex-module  clearfix">
+            <a target="_blank" class="profile-picture" href={{img.length==0 ? "/profile/default.png": img.replace("~","") }}>
+                <img class="avatar size128" alt="{{fn}}"  src={{img.length==0 ? "/profile/default.png": img.replace("~","") }}>
+            </a>
+            <div data-user-id={{id}} data-screen-name={{uid}} class="profile-card-inner js-actionable-user">
+                <h1 class="fullname">
+                    {{fn}}
+                </h1>
+                <h2 class="username">
+                    <span class="js-username"><span class="screen-name"><s>@</s>{{uid}}</span></span>
+                </h2>
+                <p class="bio">{{bio}}</p>
+                <p class="location-and-url">
+                    <span class="location">{{ctr}} / {{dpt}} </span><span class="url"><a href="" rel="me nofollow"
+                        target="_blank"></a></span>
+                </p>
+            </div>
+            <div class="profile-card-actions js-profile-card-actions">
+                <div class="follow-btn-container">
+                    <a href='#!/profile/{{uid}}' class="btn btn-success">Edit your profile</a> <!-- js-thats-you edit-profile-btn -->
+                </div>
+                <ul class="stats js-mini-profile-stats">
+                    <li><a data-element-term="tweet_stats" href="#!/{{uid}}"><strong>{{zc}}</strong> Tweets</a></li>
+                    <li><a data-element-term="following_stats" href="#!/{{uid}}/following"><strong>{{fc}}</strong>
+                        Following</a></li>
+                    <li><a data-element-term="follower_stats" href="#!/{{uid}}/followers"><strong>{{f2}}</strong> Followers</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+﻿<div data-user-id={{uid}} class="account-summary">
+    <div class="dismiss">
+        <i class="close"></i>
+    </div>
+    <div class="content">
+        <a data-user-id={{uid}} href="/#!/{{uid}}" class="account-group user-thumb js-user-profile-link">
+            <img alt='{{fn}}' title='{{fn}}' src={{img.length==0 ? "/profile/default.png": img.replace("~","") }}  class="avatar ">
+            <span data-user-id={{id}} class=account-group-inner>
+            <b class="fullname">{{fn}}</b> <i class="verified"></i><s>@</s>{{uid}}</span></a>
+            <small class="metadata social-context">{{ctr}}/{{dpt}}</small>
+            · <span class="js-follow-state"><a data-user-id={{uid}} class="js-action-follow js-link" href="#">Follow</a></span>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+﻿<div data-item-type="user" data-item-id="{{id}}" class="js-stream-item stream-item" >
+    <div data-user-id={{uid}} data-screen-name='{{fn}}' class="account js-actionable-user js-profile-popup-actionable ">
+        <div data-screen-name='{{fn}}'  data-user-id={{uid}} class="js-follow-combo follow-combo btn-group js-actionable-user {{follow==0 ? 'not-following' : 'following'}} dismissable" >
+            <div data-feedback-token="1" data-screen-name='{{fn}}' data-user-id={{uid}} class="js-follow-combo follow-combo btn-group js-actionable-user dismissable">
+              <a class="follow-btn btn js-combo-btn js-recommended-item">
+                <div data-user-id={{uid}} class="js-action-follow follow-text action-text">
+                  <i class="follow"></i>
+                  Follow
+                </div>
+                <div class="following-text action-text">
+                  Following
+                </div>
+                <div data-user-id={{uid}} class="js-action-unfollow unfollow-text action-text">
+                  Unfollow
+                </div>
+                <div class="block-text action-text">
+                  Blocked
+                </div>
+                <div data-user-id={{uid}} class="js-action-unblock unblock-text action-text">
+                  Unblock
+                </div>
+                <div class="pending-text action-text">
+                  Pending
+                </div>
+                <div data-user-id={{uid}} class="js-action-unfollow cancel-req-text action-text">
+                  Cancel
+                </div>
+              </a>
+              </div>
+
+        </div>
+        <div class="content">
+            <div class="stream-item-header">
+                <a href=/#!/{{uid}} class="account-group js-user-profile-link" data-user-id={{uid}}>
+                    <img alt='{{fn}}' title='{{fn}}' src="{{%20(img)? img : '/profile/default.png' }}" 
+                        class="avatar js-action-profile-avatar ">
+                    <strong class="fullname js-action-profile-name">{{fn}}</strong> <span class="username js-action-profile-name">
+                        <s>@</s>{{uid}}</span> </a>
+            </div>
+            <p class="metadata">
+                {{ctr}} / {{dpt}}
+            </p>
+            <p class="bio">
+            {{bio}}
+            </p>
+        </div>
+    </div>
+</div>

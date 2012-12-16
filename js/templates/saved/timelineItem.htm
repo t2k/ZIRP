@@ -1,0 +1,41 @@
+﻿<div data-user-id={{uid}} data-screen-name="{{pro.fn}}" data-item-id={{id}} data-tweet-id={{id}} class="tweet stream-item original-tweet" >
+    <div class=content>
+        <div class="stream-item-header">
+            <a data-user-id={{uid}} href="#" class="account-group js-user-profile-link" >
+                <img title='{{pro.fn}}' src="{{(pro.img)? pro.img.replace("~","") : '/profile/default.png' }}" class="avatar js-action-profile-avatar" >
+                <strong class="fullname js-action-profile-name">{{pro.fn}}</strong> 
+                <span class="username js-action-profile-name">
+                    <s>@</s><b>{{uid}}</b>
+                </span> 
+                <small class=time>
+                    <span data-zirptime={{ts}} class="_timestamp">{{$.elapsedTimeString(new Date(ts))}}</span>
+                </small>
+            </a>
+            <ul class="actions js-actions">
+                <li class="action-reply-container"><a title="Reply" href="#" data-modal="tweet-reply"
+                    class="with-icn js-action-reply"><i class="action-reply"></i><b>Reply</b> </a>
+                </li>
+                <li class="action-rt-container"><a href="#" data-modal="tweet-retweet" class="with-icn js-toggle-rt">
+                    <i class="action-rt"></i><b><span title="Undo retweet" class="undo-retweet">Retweeted</span><span
+                        title="Retweet" class="retweet">Retweet</span></b> </a></li>
+                <li class="action-del-container"><a title="Delete" href="#" class="with-icn js-action-del">
+                    <i class="action-del"></i><b>Delete</b> </a></li>
+                <li class="action-fav-container"><a href="#" class="with-icn js-toggle-fav"><i class="action-fav">
+                </i><b><span title="Undo favorite" class="unfavorite">Favorited</span><span title="Favorite"
+                    class="favorite">Favorite</span></b> </a></li>
+                <li class="action-open-container"><span class="separator">·</span> <a href=#!/{{uid}}
+                    class="with-icn js-open-close-tweet"><span title="Close Tweet" class="close-tweet">Close</span>
+                    <span title="Open Tweet" class="open-tweet">Open</span> <span title="View Tweet details"
+                        class="details-tweet">Details</span> </a>
+                </li>
+            </ul>
+        </div>
+        <p class="js-tweet-text">
+            {{zirp}}
+        </p>
+        <div class="stream-item-footer">
+            <div class="context">
+            </div>
+        </div>
+    </div>
+</div>

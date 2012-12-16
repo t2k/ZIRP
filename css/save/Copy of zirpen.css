@@ -1,0 +1,901 @@
+﻿        #zirpen-counter.tcAlert
+        {
+            color: red;
+        }
+
+        #zirpen-counter.tcWarn
+        {
+            color: orange;
+        }
+        
+
+        body
+        {
+            height: 100%;
+        }
+
+        ol, ul
+        {
+            list-style: none outside none;
+        }
+        
+        #page-container
+        {
+            z-index: 1; /* background-color: #C0DEED; */
+            height: auto;
+        }
+        
+        #page-outer
+        {
+            background-image: url("/img/bg.png");
+            height: auto;
+            background-attachment: fixed;
+            background-color: #C0DEED;
+            background-position: left 40px;
+            background-repeat: no-repeat;
+            color: #333333;
+            font: 14px/18px "HelveticaNeue" , "Helvetica Neue" , Helvetica, Arial, sans-serif;
+            width: 100%; /* background-color: #cbe3ff;*/
+            line-height: 1; /* overflow: auto; */
+        }
+        
+        .left
+        {
+            float: left;
+        }
+        
+        .right
+        {
+            float: right;
+        }
+        
+        
+        .content-searchbar
+        {
+            display: none;
+            background-color: #F5F5F5;
+            border-bottom: 1px solid #E8E8E8;
+            padding: 12px;
+        }
+        
+        .content-searchbar .search-query
+        {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) inset, 0 1px 0 #FFFFFF;
+        }
+        
+        .flex-table
+        {
+            width: 100%;
+        }
+        
+        .flex-table-primary
+        {
+            padding-right: 5px;
+            width: 99%;
+        }
+        
+        
+        .flex-table-primary, .flex-table-secondary
+        {
+            vertical-align: top;
+        }
+        
+        .flex-table-input
+        {
+            -moz-box-sizing: border-box;
+            display: block;
+            height: 30px;
+            width: 100%;
+            font-size: 12px;
+        }
+        
+        
+        .follow
+        {
+            background-position: 0 -430px;
+            height: 14px;
+            width: 18px;
+            margin-right: 2px;
+            margin-top: 2px;
+            
+        }
+        
+        
+        .follow-bar small
+        {
+            float: right;
+            line-height: 30px;
+            text-shadow: 0 1px 0 #FFFFFF;
+        }
+        
+        .bio
+        {
+            color: #777777;
+            font: italic 13px/18px Georgia,Times New Roman,serif;
+            word-wrap: break-word;
+        }
+        
+        i
+        {
+            background-image: url("/img/zirpen_web_sprite_bgs.png");
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            display: inline-block;
+            vertical-align: text-top;
+        }
+        
+        
+        .profile-summary
+        {
+            cursor: pointer;
+        }
+        
+        
+
+        
+        .btn-group
+        {
+            position: relative;
+        }
+        
+        .follow-btn
+        {
+            padding: 0;
+        }
+        .btn-user-actions, .btn-search-actions
+        {
+            padding-left: 7px;
+            padding-right: 7px;
+        }
+        
+        .not-following .follow-btn .follow-text, .following .follow-btn .following-text, .following .follow-btn:hover .unfollow-text, .following.first-hover .follow-btn:hover .following-text, .blocked .follow-btn .block-text, .blocked .follow-btn:hover .unblock-text, .follow-request-sent .follow-btn .pending-text, .follow-request-sent .follow-btn:hover .cancel-req-text
+        {
+            display: block;
+        }
+        .not-following.follow-request-sent .follow-btn .follow-text, .following .follow-btn:hover .following-text, .following.first-hover .follow-btn:hover .unfollow-text, .blocked .follow-btn:hover .block-text, .follow-request-sent .follow-btn:hover .pending-text, .follow-btn .action-text
+        {
+            display: none;
+        }
+        .following .follow-btn, .blocked .follow-btn, .follow-request-sent .follow-btn
+        {
+            text-align: center;
+        }
+        
+        /* note CSS order is important here this rule must occur after rules just above */
+        .follow-btn .action-text
+        {
+            /* display: none; */
+        }
+        
+        .action-text
+        {
+            min-width: 70px;
+        }
+        
+        .mini-profile img
+        {
+            float: left;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        
+        strong
+        {
+            font-style: inherit;
+            font-weight: bold;
+        }
+        
+        
+        .stream-item .content
+        {
+            margin-left: 58px;
+        }
+        
+        .stream-item .account .content
+        {
+            margin-right: 150px;
+        }
+        
+        a
+        {
+            color: #0084B4;
+            outline: 0 none;
+            text-decoration: none;
+        }
+        .tweet-box textarea
+        {
+            border-radius: 4px 4px 4px 4px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) inset, 0 1px 0 #FFFFFF;
+            resize: vertical;
+        }
+        
+        
+        
+             
+        .tweet-box
+        {
+            line-height: 18px;
+        }
+        
+        
+        
+        
+        .tweet-box .twitter-anywhere-tweet-box-editor
+        {
+            color: #222222;
+            font-size: 12px;
+            height: 90px;
+            line-height: 16px;
+            outline: medium none;
+            overflow-x: hidden;
+            overflow-y: auto;
+            padding: 4px 7px 3px;
+            white-space: pre-wrap;
+            width: 100%;
+            word-wrap: break-word;
+        }
+        
+        
+        .condensed .twitter-anywhere-tweet-box-editor
+        {
+            color: #AAAAAA;
+            line-height: 18px;
+            height: 29px !important;
+            min-height: 29px !important;
+            overflow: hidden;
+            
+        }
+        
+        input, textarea, select
+        {
+            background-color: #FFFFFF;
+            border: 1px solid #CCCCCC;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 0;
+            outline: medium none;
+            padding: 4px;
+            height: auto;
+        }
+
+
+        input, textarea
+        {
+            -moz-transition: background 0.2s linear 0s;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) inset, 0 1px 0 rgba(255, 255, 255, 0.075);
+            transition: background 0.2s linear 0s;
+        }
+        
+        
+        textarea
+        {
+            height: auto;
+        }
+        
+        
+        label, input, textarea, select, button
+        {
+            font: 13px/20px "HelveticaNeue" , "Helvetica Neue" ,Helvetica, Arial, sans-serif;
+        }
+        
+        .tweet-button-sub-container
+        {
+            position: relative;
+        }
+        
+       
+        .disabled, .disabled:hover, .disabled:active, input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly]
+        {
+            background: none repeat scroll 0 0 #F5F5F5;
+            border-color: #CCCCCC;
+            cursor: not-allowed;
+        }
+    
+        
+        
+        .open .tweet, .animating .tweet
+        {
+            border-bottom: medium none;
+            border-radius: 6px 6px 6px 6px;
+        }
+        
+        
+        .tweet
+        {
+            cursor: pointer;
+        }
+        
+        .recent-tweets .tweet
+        {
+            border-bottom: medium none;
+            border-radius: 0 0 0 0;
+            cursor: default;
+            font-size: 12px;
+            min-height: 32px;
+            padding: 9px 15px 12px;
+        }
+        
+        .recent-tweets .tweet .avatar
+        {
+            border-radius: 4px 4px 4px 4px;
+            height: 32px;
+            left: 15px;
+            width: 32px;
+        }
+        
+        .recent-tweets .tweet + .tweet
+        {
+            border-top: 1px solid #E8E8E8;
+        }
+        
+        .account, .interest-category, .list, .saved-search, .tweet, .app
+        {
+            border-bottom: 1px solid #E8E8E8;
+            min-height: 51px;
+            padding: 9px 12px;
+            position: relative;
+        }
+        
+        
+        .stream-item-header .avatar
+        {
+            position: absolute;
+            left: 12px;
+            top: 12px;
+        }
+        
+        s
+        {
+            opacity: 0.6;
+            text-decoration: none;
+        }
+        
+        .account-group-inner
+        {
+            font-size: 12px;
+            color: #999;
+        }
+        
+        .stream-item-header .account-group
+        {
+            color: #999999;
+        }
+        
+        .pretty-link:hover s, 
+        .pretty-link:hover b, 
+        .metadata a:hover, 
+        .account-group:hover .fullname, 
+        .stats a:hover, 
+        .stats a:hover strong, 
+        .profile-modal-header .fullname a:hover, 
+        .profile-modal-header .username a:hover, 
+        .story-article:hover .metadata, 
+        .find-friends-sources li:hover .source, 
+        .stream-item a:hover .fullname, 
+        .stream-item .time a:hover, 
+        .stream-item .view-all-supplements:hover, 
+        .tweet .details, 
+        .tweet .content-expansion a:hover, 
+        .tweet p a:hover, 
+        .tweet:hover .action-open-container a, 
+        .client-and-actions a:hover, 
+        .dismiss-promoted:hover b, 
+        .tweet .context .pretty-link:hover s, 
+        .tweet .context .pretty-link:hover b, 
+        .list .username a:hover, 
+        .list-membership-container 
+        .create-a-list, 
+        .list-membership-container .create-a-list:hover, 
+        .permalink-tweet p a, 
+        .permalink-tweet .actions a, 
+        .tweet .actions li:hover b, 
+        .open .tweet p a, .open .original-tweet .action-open-container a, .open .original-tweet .actions b, .story-header:hover .view-tweets, .card .list-details a:hover, .card .card-body:hover .attribution, .new-tweets-bar, .remove-background-btn, .stream-item-activity-me .latest-tweet .tweet-row a:hover, .colored-actions.tweet .actions a, .colored-links.tweet p a
+        {
+            color: #0084B4;
+        }
+        
+
+        a
+        {
+            color: #0084B4;
+            outline: 0 none;
+            text-decoration: none;
+        }
+        
+        
+        .username, .time, .time a, .metadata, .metadata a
+        {
+            color: #999999;
+            font-size: 12px;
+        }
+        
+        
+        .tweet .stream-item-header
+        {
+            margin-bottom: 2px;
+        }
+        
+        
+        .tweet .stream-item-header .actions
+        {
+            opacity: 0;
+            padding-left: 45px;
+        }
+        
+        
+        .tweet .actions, .tweet .time
+        {
+            -moz-transition: opacity 0.2s ease-in-out 0s;
+            position: absolute;
+            right: 12px;
+            top: 9px;
+        }
+        
+        .tweet .actions
+        {
+            background-position: 0 -240px;
+        }
+        
+        .global-nav, .global-nav .well, .btn-tweet, .btn-tweet:hover, .btn-tweet:active, .nav .active > a, .nav .open .dropdown-toggle, .form-search.has-saved-searches.focus, .tweet .actions
+        {
+            background-image: url("/img/twitter_web_sprite_bgs.png");
+            background-repeat: repeat-x;
+        }
+        
+        .tweet span.unfavorite, .tweet.favorited span.favorite, .tweet.retweeted .retweet, .tweet .hide-open, .tweet .undo-retweet, .tweet.my-tweet .action-rt-container, .tweet .actions .action-del-container, .replies .tweet .actions, .stream-item .in-reply-to .tweet .actions, .open .actions .open-tweet, .replies .details, .in-reply-to .details, .replies .close-tweet, .in-reply-to .close-tweet, .original-tweet .client-and-actions .action-open-container, .open .original-tweet .stream-item-header .action-del-container, .open .original-tweet .stream-item-header .action-reply-container, .open .original-tweet .stream-item-header .action-rt-container, .open .original-tweet .stream-item-header .action-fav-container, .open .original-tweet .stream-item-header .separator, .open .original-tweet .time
+        {
+            display: none;
+        }
+        
+        .tweet .actions li
+        {
+            display: inline;
+        }
+        
+        .tweet .actions a
+        {
+            color: #999999;
+            margin-left: 7px;
+        }
+        
+        
+        .tweet p
+        {
+            font-family: Helvetica;
+            word-wrap: break-word;
+            line-height: 1.115;
+            margin-bottom: 3px;
+        }
+        
+        .tweet .stream-item-footer
+        {
+            font-size: 12px;
+            overflow: hidden;
+        }
+        
+        .new-tweets-bar
+        {
+            display: none;
+            background-color: #F5F5F5;
+            border-top: 1px solid #DDDDDD;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05) inset;
+            cursor: pointer;
+            display: block;
+            font-size: 14px;
+            font-weight: normal;
+            padding: 10px 1px;
+            position: relative;
+            text-align: center;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+            top: -1px;
+            z-index: 2;
+        }
+        
+        h2
+        {
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 20px;
+        }
+        
+        h1, h2, h3, h4, h5, h6
+        {
+            margin: 0;
+            color: #333333;
+            text-rendering: optimizelegibility;
+        }
+        
+        .content-header .header-inner
+        {
+            background-color: #FFFFFF;
+            border-bottom: 1px solid #E8E8E8;
+            border-radius: 5px 5px 0 0;
+            min-height: 20px;
+            padding: 12px;
+        }
+        
+
+        .ui-button .ui-button-text
+        {
+            font-size: 12px;
+            padding: 2px 8px;
+        }
+        
+        .wrapper
+        {
+            background: url("/img/wash-white-30.png") repeat scroll 0 0 transparent;
+            height: auto;
+            margin: 0 auto; /* padding: 54px 14px 15px; */
+            padding: 15px 14px;
+            position: relative;
+            width: 838px; /*dashboard=302 + main-content=522 */
+        }
+        
+        
+        
+        .module
+        {
+            background-color: #FFF;
+            border-radius: 6px; 
+            text-shadow: 0 1px 0 #FFFFFF; 
+            line-height: 16px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        
+        
+        
+        .stream-end, .stream-loading, .stream-placeholder
+        {
+            color: #777777;
+            font-size: 13px;
+            text-align: center;
+        }
+        
+        .stream-end-item, .stream-end, .stream-loading, .stream-placeholder
+        {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            border-left: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 6px 6px;
+            border-right: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .stream-end-inner
+        {
+            background-color: #FFFFFF;
+            border-radius: 0 0 5px 5px;
+            padding: 30px 50px;
+        }
+        
+        .spinner
+        {
+            background: url("/img/loader.gif") no-repeat scroll center center transparent;
+            display: block;
+            height: 32px;
+            margin: 0 auto;
+            width: 32px;
+        }
+        
+        
+        
+        .flex-table-btn
+        {
+            float: right;
+            white-space: nowrap;
+            width: auto;
+        }
+        
+        
+        .stream-item .account .follow-combo, .stream-item .account .btn-group, .stream-item .account .edit-profile-btn
+        {
+            float: right;
+        }
+        
+        .btn-group
+        {
+            position: relative;
+        }
+        
+        
+        .btn
+        {
+            background-color: #DDDDDD;
+            background-image: -moz-linear-gradient(#FFFFFF, #DDDDDD);
+            background-repeat: repeat-x; /*        background-color: #CCCCCC;
+		background-repeat: no-repeat;  */
+            border: 1px solid #CCCCCC;
+            border-radius: 4px 4px 4px 4px;
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+            color: #333333;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 18px;
+            overflow: visible;
+            padding: 4px 10px;
+            position: relative;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+        }
+        
+        .btn:disabled, .btn.disabled
+        {
+            background-image: none;
+            color: #777777;
+            cursor: default;
+            opacity: 0.65;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+        }
+        .btn:active, .follow-combo.open .btn-user-actions
+        {
+            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+        .btn
+        {
+            background-color: #DDDDDD;
+            background-image: -moz-linear-gradient(#FFFFFF, #DDDDDD);
+            background-repeat: repeat-x;
+        }
+        .btn:hover, .follow-combo.open .btn-user-actions
+        {
+            background-color: #D8D8D8;
+            background-image: -moz-linear-gradient(#F8F8F8, #D8D8D8);
+            border-color: #BBBBBB;
+            text-decoration: none;
+        }
+        
+        #mini-profile
+        {
+            visibility: visible;
+            top: 0px;
+            width: 400px;
+            height: auto;
+            display: block;
+        }
+        
+        #mini-profile .twttr-dialog-header
+        {
+            position: absolute;
+            right: 0;
+            z-index: 2;
+        }
+        #mini-profile .profile-modal-header-inner .fullname a
+        {
+            display: inline-block;
+            max-width: 290px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            vertical-align: top;
+            white-space: nowrap;
+        }
+        #mini-profile .twttr-dialog-body
+        {
+            padding: 0;
+        }
+        #mini-profile .protected-mini-profile-footer
+        {
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+        }
+        #mini-profile .stats a
+        {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .mini-profile-footer
+        {
+            background-color: #EEEEEE;
+            border-bottom: 1px solid #E8E8E8;
+            padding: 10px 15px;
+        }
+        #mini-profile .twttr-dialog-header h3
+        {
+            display: none;
+        }
+        #mini-profile .stream-item-header .sm-lock
+        {
+            margin-top: 0;
+        }
+
+        .profile-modal-header
+        {
+            height: 48px;
+            padding: 15px 15px 5px;
+        }
+        .profile-modal-header .avatar
+        {
+            float: left;
+        }
+        .profile-modal-header-inner
+        {
+            margin-left: 58px;
+            margin-right: 30px;
+        }
+        .profile-modal-header .fullname
+        {
+            font-size: 24px;
+            line-height: 28px;
+            margin-top: -2px;
+            white-space: nowrap;
+        }
+        .profile-modal-header .fullname a
+        {
+            color: #333333;
+        }
+        .profile-modal-header .username
+        {
+            color: #777777;
+            font-size: 16px;
+            line-height: 20px;
+        }
+        .profile-modal-header .username a
+        {
+            color: #777777;
+        }
+        .profile-modal-header .follow-status
+        {
+            display: none;
+            margin-left: 0;
+            top: -1px;
+        }
+        .profile-modal-header .sm-lock
+        {
+            margin: 3px 0 0 2px;
+        }
+        .profile-modal-header .verified, .profile-modal-header .translator
+        {
+            margin: 6px 0 0;
+        }
+        .profile-modal-extended
+        {
+            padding: 0 15px 10px;
+        }
+        .profile-modal-extended .location-and-url, .profile-modal-extended .social-proof
+        {
+            color: #777777;
+            font-size: 12px;
+        }
+        .profile-modal-extended .social-proof
+        {
+            margin-top: 9px;
+        }
+        .profile-modal-extended .divider
+        {
+            color: #CCCCCC;
+            padding: 0 2px;
+        }
+        .location-and-url .url
+        {
+            word-wrap: break-word;
+        }
+        #mini-profile .recent-tweets
+        {
+            margin-bottom: 0;
+        }
+        #mini-profile .recent-tweets .sm-lock
+        {
+            margin-top: -1px;
+        }
+        
+        .ui-dialog .ui-dialog-content
+        {
+            padding: 0;
+        }
+        
+        
+        .profile-card .flex-module
+        {
+            background-color: #FFFFFF;
+        }
+        .profile-card .avatar
+        {
+            float: left;
+        }
+        .profile-card-inner
+        {
+            float: left;
+            margin: 0 0 0 12px;
+            width: 50%;
+        }
+        .profile-card-actions
+        {
+            float: right;
+            position: relative;
+        }
+        .profile-card-actions .follow-btn-container
+        {
+            height: 30px;
+            position: relative;
+        }
+        .profile-card .fullname
+        {
+            font-size: 30px;
+            line-height: 1; /* margin-bottom: 2px;*/
+        }
+        .profile-card .username
+        {
+            color: #777777;
+            font-size: 18px;
+            font-weight: normal;
+            line-height: 24px;
+            margin-bottom: 1px;
+        }
+        .profile-card .username .sm-lock
+        {
+            margin-left: 3px;
+            position: relative;
+            top: 5px;
+        }
+        .profile-card .verified-large
+        {
+            margin-top: 7px;
+        }
+        .profile-card .translator-badge
+        {
+            color: #999999;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 22px;
+            margin-top: 7px;
+        }
+        .profile-card .translator-large
+        {
+            float: left;
+            margin-right: 4px;
+        }
+        .profile-card .location-and-url
+        {
+            color: #777777;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        .follow-status
+        {
+            background-color: #EEEEEE;
+            border-radius: 3px 3px 3px 3px;
+            color: #777777;
+            font-size: 10px;
+            line-height: 1;
+            margin-left: 5px;
+            padding: 2px 5px;
+            position: relative;
+            text-transform: uppercase;
+            top: -2px;
+        }
+        .profile-card .divider
+        {
+            color: #CCCCCC;
+            padding: 0 2px;
+        }
+        .profile-card .stats
+        {
+            border-bottom: 0 none;
+            border-top: 0 none;
+            margin: 5px 0 0;
+        }
+        .profile-card .stats a
+        {
+            -moz-border-bottom-colors: none;
+            -moz-border-image: none;
+            -moz-border-left-colors: none;
+            -moz-border-right-colors: none;
+            -moz-border-top-colors: none;
+            border-color: #E8E8E8 -moz-use-text-color -moz-use-text-color;
+            border-right: 0 none;
+            border-style: solid none none;
+            border-width: 1px 0 0;
+            display: block;
+            float: none;
+            padding: 6px 12px 6px 0;
+        }
+        .profile-card .stats strong
+        {
+            display: inline;
+        }
+        .profile-card .stats li:first-child a
+        {
+            border-top: 0 none;
+        }

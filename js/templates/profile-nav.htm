@@ -1,0 +1,116 @@
+﻿<div class="component" data-component-term="profile_nav">
+    <div class="module profile-nav">
+        <ul class="js-items-container">
+            <li data-element-term="profile_item" data-name="profile" class="js-sidenav-link">
+                <a href="#!/{{uid}}" class="list-link">Tweets <i class="chev-right"></i></a>
+            </li>
+            <li data-element-term="following_item" data-name="following" class="js-sidenav-link">
+                <a href="#!/{{uid}}/following" class="list-link">Following <i class="chev-right"></i></a>
+            </li>
+            <li data-element-term="followers_item" data-name="followers" class="js-sidenav-link">
+                <a href="#!/{{uid}}/followers" class="list-link">Followers <i class="chev-right"></i>
+                    <span class="js-metadata metadata"></span>
+                </a>
+            </li>
+            <li data-element-term="favorites_item" data-name="favorites" class="js-sidenav-link">
+                <a href="#!/favorites/{{uid}}" class="list-link">Favorites <i class="chev-right"></i>
+                </a>
+            </li>
+            <li data-element-term="subscriptions_item" data-name="subscriptions" class="js-sidenav-link">
+                <a href="#!/lists/{{uid}}" class="list-link">Lists <i class="chev-right"></i></a>
+            </li>
+            <div class="component" data-component-term="user_media">
+                <div class="component" data-component-term="images">
+                    <li class="list-link js-facets">
+                        <a class="list-action js-view-all" href="#!/media/grid/{{uid}}">
+                        Recent images <i class="chev-right"></i>
+                        <!-- 
+                        <div class="component" data-component-term="thumbnail_viewer">
+                            <div class="js-thumbnail-viewer-container media-row media-videos" style="">
+                                <div class="js-thumbnail-viewer-images" style="width: 490px; left: 0px; -moz-transition-property: none;">
+                                    <a style="width: 66px; height: 66px;" class="media-thumbnail thumbnail-image-wrapper"
+                                        data-url="pic.twitter.com/PrTUyLsB" href="#!/{{uid}}/media/slideshow?url=pic.twitter.com%2FPrTUyLsB">
+                                        <div data-url="pic.twitter.com/PrTUyLsB" class="thumbnail-wrapper">
+                                            <img class="scaled-image" src="https://p.twimg.com/AltolhfCIAACddV.jpg:thumb" origheight="150"
+                                                origwidth="150" style="width: 66px; height: 66px; top: 0px; left: 0px; opacity: 1;
+                                                -moz-transition-property: none;"></div>
+                                        <i class="play"></i>
+                                        <div class="thumbnail-active-border">
+                                            <div class="thumbnail-active-border-inner">
+                                            </div>
+                                        </div>
+                                    </a><a style="width: 66px; height: 66px;" class="media-thumbnail thumbnail-image-wrapper"
+                                        data-url="pic.twitter.com/QzZzarNU" href="#!/{{uid}}/media/slideshow?url=pic.twitter.com%2FQzZzarNU">
+                                        <div data-url="pic.twitter.com/QzZzarNU" class="thumbnail-wrapper">
+                                            <img class="scaled-image" src="https://p.twimg.com/Als38BzCAAILoTN.jpg:thumb" origheight="150"
+                                                origwidth="150" style="width: 66px; height: 66px; top: 0px; left: 0px; opacity: 1;
+                                                -moz-transition-property: none;"></div>
+                                        <i class="play"></i>
+                                        <div class="thumbnail-active-border">
+                                            <div class="thumbnail-active-border-inner">
+                                            </div>
+                                        </div>
+                                    </a><a style="width: 66px; height: 66px;" class="media-thumbnail thumbnail-image-wrapper"
+                                        data-url="pic.twitter.com/UNJIw8l5" href="#!/{{uid}}/media/slideshow?url=pic.twitter.com%2FUNJIw8l5">
+                                        <div data-url="pic.twitter.com/UNJIw8l5" class="thumbnail-wrapper">
+                                            <img class="scaled-image" src="https://p.twimg.com/AjATCHaCIAAhxSA.jpg:thumb" origheight="150"
+                                                origwidth="150" style="width: 66px; height: 66px; top: 0px; left: 0px; opacity: 1;
+                                                -moz-transition-property: none;"></div>
+                                        <i class="play"></i>
+                                        <div class="thumbnail-active-border">
+                                            <div class="thumbnail-active-border-inner">
+                                            </div>
+                                        </div>
+                                    </a><a style="width: 66px; height: 66px;" class="media-thumbnail thumbnail-image-wrapper"
+                                        data-url="pic.twitter.com/0t6VFZmZ" href="#!/{{uid}}/media/slideshow?url=pic.twitter.com%2F0t6VFZmZ">
+                                        <div data-url="pic.twitter.com/0t6VFZmZ" class="thumbnail-wrapper">
+                                            <img class="scaled-image" src="https://p.twimg.com/AikShaNCQAAoKLy.jpg:thumb" origheight="150"
+                                                origwidth="150" style="width: 66px; height: 66px; top: 0px; left: 0px; opacity: 1;
+                                                -moz-transition-property: none;"></div>
+                                        <i class="play"></i>
+                                        <div class="thumbnail-active-border">
+                                            <div class="thumbnail-active-border-inner">
+                                            </div>
+                                        </div>
+                                    </a><a style="width: 66px; height: 66px;" class="media-thumbnail thumbnail-image-wrapper"
+                                        data-url="pic.twitter.com/DPqP3u7O" href="#!/{{uid}}/media/slideshow?url=pic.twitter.com%2FDPqP3u7O">
+                                        <div data-url="pic.twitter.com/DPqP3u7O" class="thumbnail-wrapper">
+                                            <img class="scaled-image" src="https://p.twimg.com/Aiey4X-CEAEBf85.jpg:thumb" origheight="150"
+                                                origwidth="150" style="width: 66px; height: 66px; top: 0px; left: 0px; opacity: 1;
+                                                -moz-transition-property: none;"></div>
+                                        <i class="play"></i>
+                                        <div class="thumbnail-active-border">
+                                            <div class="thumbnail-active-border-inner">
+                                            </div>
+                                        </div>
+                                    </a><a style="width: 66px; height: 66px;" class="media-thumbnail thumbnail-image-wrapper"
+                                        data-url="http://twitpic.com/51j7dx" href="#!/{{uid}}/media/slideshow?url=http%3A%2F%2Ftwitpic.com%2F51j7dx">
+                                        <div data-url="http://twitpic.com/51j7dx" class="thumbnail-wrapper">
+                                            <img class="scaled-image" src="//twitpic.com/show/mini/51j7dx" origheight="75" origwidth="75"
+                                                style="width: 66px; height: 66px; top: 0px; left: 0px; opacity: 1; -moz-transition-property: none;"></div>
+                                        <i class="play"></i>
+                                        <div class="thumbnail-active-border">
+                                            <div class="thumbnail-active-border-inner">
+                                            </div>
+                                        </div>
+                                    </a><a style="width: 66px; height: 66px;" class="media-thumbnail thumbnail-image-wrapper"
+                                        data-url="http://twitpic.com/4x883q" href="#!/{{uid}}/media/slideshow?url=http%3A%2F%2Ftwitpic.com%2F4x883q">
+                                        <div data-url="http://twitpic.com/4x883q" class="thumbnail-wrapper">
+                                        </div>
+                                        <i class="play"></i>
+                                        <div class="thumbnail-active-border">
+                                            <div class="thumbnail-active-border-inner">
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </ul>
+    </div>
+</div>

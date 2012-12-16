@@ -1,0 +1,58 @@
+﻿// views.zirpen-box.js
+define(['jquery', 'underscoreM', 'marionette', 'text!templates/zirpen-box.htm', 'Models/models.zirpen', 'utils/jquery.textCounter'], function ($, _, Marionette, template, TweetModel) {
+    return Marionette.ItemView.extend({
+        template: _.template(template),
+        uid: null,
+        // Delegated events for creating new items, and clearing completed ones.
+        events: {
+            'click .primary-btn': 'postZirpen',  // note: primary-btn class is toggled by textcounter.js if over 140 chars cannot post msg
+            'click #zirpen': 'expandZirpen',
+            'blur #zirpen': 'condenseZirpen'
+        },
+
+        initialize: function (options) {
+            this.uid = options.uid;
+            $(this.ui.counter).textCounter({ target: "#zirpen", action: '#zirpen-button' });
+        },
+
+        ui: {
+            counter: '.counter',
+            tweet: '#zirpen'
+        },
+
+        onRender: function () {
+            
+        },
+
+        /*
+        render: function () {
+        //console.log('timeline: render');
+        this.$el.html(this.template());  // no model
+        $.wait(100).then(function () {
+        //this.$('#zirpen-counter').textCounter({ target: "#zirpen, this.el", action: '#zirpen-button, this.el' });
+        //this.$('#zirpen-counter').textCounter({ target: "#zirpen", action: '#zirpen-button' });
+        });
+        return this;
+        },
+        */
+
+        expandZirpen: function (e) {
+            this.ui.tweet.attr('rows', 4);
+
+        },
+
+        condenseZirpen: function (e) {
+            //var $t = this.$('#zirpen');
+            if (this.ui.tweet.val().length === 0) {
+                this.ui.tweet.attr('rows', 1); // $t.parent().parent().parent().addClass('condensed');
+            }
+        },
+
+        postZirpen: function (e) {
+            e.preventDefault();
+            // how about trigger an event for 
+            var tweet = new TweetModel({ userid: this.uid, zirp: this.ui.tweet.val().trim() });
+            tweet.save();
+        }
+    });
+});
