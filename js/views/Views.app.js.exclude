@@ -1,9 +1,0 @@
-﻿//views.app.js  self instantiating view
-define(['jquery', 'underscoreM', 'marionette', 'text!templates/app.htm'], function ($, _, Marionette, template) {
-      // instantiated view pattern, note return new ()({...}).render(); here, (alot going on)
-      return new (Marionette.ItemView.extend({
-
-          template: _.template(template)
-
-      }))({ el: $('#content') }).render();
-  });

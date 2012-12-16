@@ -1,5 +1,5 @@
-﻿//composite-profile   views.profile-dialog
-define(['jquery', 'underscoreM', 'marionette', 'text!templates/profile.dialog.htm', 'Views/timelineitem'], function ($, _, Marionette, template, ItemView) {
+//composite-profile   views.profile-dialog
+define(['jquery', 'underscoreM', 'marionette', 'text!templates/profile.dialog.htm', 'views/timelineItem'], function ($, _, Marionette, template, ItemView) {
     return Marionette.CompositeView.extend({
         template: _.template(template),
         itemView: ItemView,

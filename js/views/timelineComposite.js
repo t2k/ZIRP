@@ -1,5 +1,5 @@
-﻿// collection view timelines have collection of timeline models render themseleves
-define(['underscoreM', 'marionette', 'Views/timeLineItem', 'text!templates/composite-timeline.htm'], function (_, Marionette, ItemView, Template) {
+// collection view timelines have collection of timeline models render themseleves
+define(['underscoreM', 'marionette', 'views/timelineItem', 'text!templates/composite-timeline.htm'], function (_, Marionette, ItemView, Template) {
     return Marionette.CompositeView.extend({
         template: _.template(Template),
         itemView: ItemView,

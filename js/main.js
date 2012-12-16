@@ -1,19 +1,19 @@
-﻿// Filename: main.js
+// Filename: main.js
 // 
 require.config({
     paths: {
         // note these are all AMD compliant versions
-        jquery: '../../components/jquery/jquery',  // amd version
-        underscore: '../../components/underscore-amd/underscore', // amd version
+        jquery: '../components/jquery/jquery',  // amd version
+        underscore: '../components/underscore-amd/underscore', // amd version
         underscoreM: 'libs/underscore/underscore-mustache',  // templating supporting mustache style {{ ... }}
-        backbone: '../../components/backbone-amd/backbone', // amd version
-        'backbone.wreqr': '../../components/backbone.wreqr/lib/amd/backbone.wreqr', // amd version
-        'backbone.eventbinder': '../../components/backbone.eventbinder/lib/amd/backbone.eventbinder', // amd version
-        'backbone.babysitter': '../../components/backbone.babysitter/lib/amd/backbone.babysitter', // amd version
-        marionette: '../../components/marionette/lib/core/amd/backbone.marionette',  // amd version
-        bootstrapModal: '../../components/bootstrap/docs/assets/js/bootstrap-modal', //-2.1.1',  // just using .modal for now but loading entire js bootstrap
-        bootstrapDropdown: '../../components/bootstrap/docs/assets/js/bootstrap-dropdown', //-2.1.1',  // just using .modal for now but loading entire js bootstrap
-        text: '../../components/requirejs-text/text'
+        backbone: '../components/backbone-amd/backbone', // amd version
+        'backbone.wreqr': '../components/backbone.wreqr/lib/amd/backbone.wreqr', // amd version
+        'backbone.eventbinder': '../components/backbone.eventbinder/lib/amd/backbone.eventbinder', // amd version
+        'backbone.babysitter': '../components/backbone.babysitter/lib/amd/backbone.babysitter', // amd version
+        marionette: '../components/marionette/lib/core/amd/backbone.marionette',  // amd version
+        bootstrapModal: '../components/bootstrap/docs/assets/js/bootstrap-modal', //-2.1.1',  // just using .modal for now but loading entire js bootstrap
+        bootstrapDropdown: '../components/bootstrap/docs/assets/js/bootstrap-dropdown', //-2.1.1',  // just using .modal for now but loading entire js bootstrap
+        text: '../components/requirejs-text/text'
     },
 
     shim: {
@@ -22,7 +22,7 @@ require.config({
     } 
 });
 
-require(['app', 'jquery', 'controllers/index', 'routers/index', 'utils/jquery.tkutil'],
+require(['app', 'jquery', 'controllers/index', 'routers/index', 'utils/jquery.tkUtil'],
         function (app, $, controller, router) {
             // here's the only way I can think of, call latent webservice asyncronously to get the .NET auth username and 
             // dependency inject this into our router;

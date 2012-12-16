@@ -1,12 +1,12 @@
-﻿// Filename: Controllers/index.js
+// Filename: Controllers/index.js
 define(function (require) {
     $ = require('jquery'),
     _ = require('underscoreM'),
     Marionette = require('marionette'),
     vent = require('vent'),
     WtfUserColl = require('models/collections.user'),
-    ProfileModel = require('Models/models.profile'),
-    TimelineModel = require('Models/timelineCollection'); //({ url: '/api/tweets/timeline/' + this.userName }),
+    ProfileModel = require('models/models.profile'),
+    TimelineModel = require('models/timelineCollection'); //({ url: '/api/tweets/timeline/' + this.userName }),
 
 
     var Controller = {},
@@ -132,10 +132,10 @@ define(function (require) {
     Controller.index = function () {
         _initializeLayout();
         loggedInUser.set('uid', this.userName);
-        var TimelineView = require('Views/timelinecomposite');
+        var TimelineView = require('views/timelineComposite');
         tweets.url = '/api/tweets/timeline/' + this.userName;
         wtfCollection.url = '/api/WTF/' + this.userName + '/0/5';  // page 0 size 4 ie first 4 wtf items
-        var NavView = require('Views/views.nav-main');
+        var NavView = require('views/views.nav-main');
         var timelineView = new TimelineView({ collection: tweets });
 
 

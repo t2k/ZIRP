@@ -1,5 +1,5 @@
-﻿// Wiews.module-twf.js collection view timelines have collection of timeline models render themseleves
-define(['underscoreM', 'marionette', 'text!templates/layout-wtf.htm', 'Views/wtfItem'], function (_, Marionette, template, itemView) {
+// Wiews.module-twf.js collection view timelines have collection of timeline models render themseleves
+define(['underscoreM', 'marionette', 'text!templates/layout-wtf.htm', 'views/wtfItem'], function (_, Marionette, template, itemView) {
     return Marionette.CompositeView.extend({
         template: _.template(template),
         itemView: itemView,

@@ -1,5 +1,5 @@
-﻿// mini-tweet-box.js
-define(['jquery', 'underscoreM', 'marionette', 'text!templates/mini-tweet-box.htm', 'Models/models.zirpen', 'utils/jquery.textCounter'], function ($, _, Marionette, template, TweetModel) {
+// mini-tweet-box.js
+define(['jquery', 'underscoreM', 'marionette', 'text!templates/mini-tweet-box.htm', 'models/models.zirpen', 'utils/jquery.textCounter'], function ($, _, Marionette, template, TweetModel) {
     return Marionette.ItemView.extend({
         className: 'row-fluid',
         template: _.template(template),
