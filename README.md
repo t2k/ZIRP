@@ -1,10 +1,12 @@
-#ZIRP
+##ZIRP
 ====
 
-Zirpen
+####Zirpen
 
-###Sample Code
-+ app.js
+A sample app to test Node.js/Express/Mongoose/MongeoDB server stack 
+
+#### app.js
+
 ```js
 // app.js  define the marionette application object, app-regions, modulate events (vent) and start backbone.history
 define(['backbone', 'marionette', 'vent', 'bootstrapModal'], function (Backbone, Marionette, vent) {
