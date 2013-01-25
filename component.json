@@ -1,11 +1,9 @@
 {
-  "name": "346566",
-  "version": "0.0.0",
+  "name": "ZIrP",
+  "version": "0.0.1",
   "dependencies": {
-    "jquery": "~1.8.3",
-    "bootstrap": "~2.2.2",
-    "backbone-amd": "~0.9.9",
     "underscore-amd": "~1.4.3",
+    "backbone-amd": "~0.9.9",
     "marionette": "~1.0.0-rc2",
     "backbone.eventbinder": "~1.0.2",
     "backbone.wreqr": "~0.1.0",
@@ -13,5 +11,7 @@
     "requirejs-text": "~2.0.3",
     "backbone.babysitter": "git://github.com/marionettejs/backbone.babysitter.git#~0.0.4",
     "r.js": "git://github.com/jrburke/r.js.git#~2.1.2"
-  }
+    "jquery": "~1.8.3",
+    "bootstrap": "~2.2.2",
+   }
 }
